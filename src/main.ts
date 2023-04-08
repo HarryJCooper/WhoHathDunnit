@@ -20,11 +20,11 @@ const initialUserMessages = [
     }
 ];
 
-const toggleInvisibleClass = (element) => {
+const toggleInvisibleClass = (element: any) => {
     element.classList.toggle("invisible");
 };
 
-const createMessage = async (messages) => {
+const createMessage = async (messages: any) => {
     toggleInvisibleClass(returnmessageElement);
     const message = await openai.createChatCompletion({
         model: "gpt-3.5-turbo",
@@ -34,7 +34,7 @@ const createMessage = async (messages) => {
     return message.data.choices[0].message?.content ?? "I don't know what to say";
 };
 
-const displayResponse = async (userMessages) => {
+const displayResponse = async (userMessages: any) => {
     const response = await createMessage(userMessages);
     userMessages.push({ role: "assistant", content: response });
     console.log(userMessages);
@@ -48,4 +48,4 @@ clickmeElement.addEventListener("click", async () => {
 	clickmeElement.innerText = "Ask me another";
 });
 
-// displayResponse(initialUserMessages);
+displayResponse(initialUserMessages);
