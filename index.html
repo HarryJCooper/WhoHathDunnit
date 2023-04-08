@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detectoring</title>
+  </head>
+  <body class="bg-slate-800 text-center my-32 mx-32 font-GreatVictorian-Standard">
+    <div class="flex flex-col justify-center h-full" id="app">
+      <h1 class="text-9xl text-red-600 my-12">
+        Who Hath Dunnit?
+      </h1>
+      <div class="text-slate-100 h-full text-3xl" id="returnmessage">...</div>
+
+      <p id="askMeAnother" class="text-3xl text-slate-500 mt-8">What questions hath thee, for me?</p>
+      <input 
+        id="textinput"
+        type="text"
+        class="my-12 text-3xl bg-slate-100 text-black h-48 w-full p-8 rounded-lg"
+      >
+      </input>
+
+      <button class="p-4 text-3xl bg-slate-500 mx-auto hover:bg-slate-200 rounded-lg" type="submit" id="submit">Ask your question</button>
+    </div>
+    <div id="chat">
+      
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+
+
+{# git remote add origin git@github.com:HarryJCooper/WhoHathDunnit.git
+git branch -M main
+git push -u origin main #}
