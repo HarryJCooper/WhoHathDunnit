@@ -1,11 +1,8 @@
 import './style.css';
 import { OpenAIApi, Configuration } from 'openai';
-import * as dotenv from 'dotenv'
-dotenv.config()
-
 
 const openai = new OpenAIApi(new Configuration({
-    apiKey: process.env.API_KEY
+    apiKey: import.meta.env.VITE_API_KEY
 }));
 
 const clickmeElement = document.querySelector<HTMLButtonElement>("#submit") ?? document.createElement("div");
